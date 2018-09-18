@@ -24,8 +24,8 @@ class PopoverMenu extends Component {
     render() {
         if (!this.props.showMenu) return <View />;
 
-        let rightOffset = this.props.rightOffset || defaultProps.rightOffset;
-        let topOffset = this.props.topOffset || defaultProps.topOffset;
+        let rightOffset = this.props.rightOffset || 0;
+        let topOffset = this.props.topOffset || 60;
 
         return (
             <View
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end'
     },
     menu: {
-        padding: 5,
+        padding: 2.5,
+        margin: 2.5,
         width: '60%',
         backgroundColor: 'white',
         borderRadius: 5,
