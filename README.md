@@ -43,7 +43,7 @@ export default class Example extends Component {
         <PopoverMenu showMenu={this.state.isVisible} closeMenu={this.toggleMenu} topOffset={topOffset}>
             <PopoverMenuRow title='Menu Item 1' onPress={() => console.log("Pressed Menu Item 1")} />
             <PopoverMenuRow title='Menu Item 2' onPress={() => console.log("Pressed Menu Item 2")} />
-            // <MyCustomMenuRow /> Currently the custom row needs to have a height of 40. This is a big TODO. 
+            // <MyCustomMenuRow /> 
         </PopoverMenu>
       );
   };
