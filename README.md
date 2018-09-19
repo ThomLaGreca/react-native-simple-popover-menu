@@ -22,7 +22,7 @@ export default class Example extends Component {
     super(props);
     
     this.state = {
-      isVisible: false
+      menuIsVisible: false
     };
     
     // Binding the function in the constructor is simply a best practise for better performance.
@@ -31,7 +31,7 @@ export default class Example extends Component {
 
   toggleMenu() {
       this.setState({
-          popupMenuIsVisible: !this.state.popupMenuIsVisible
+          menuIsVisible: !this.state.menuIsVisible
       });
   };
   
@@ -40,7 +40,7 @@ export default class Example extends Component {
       let topOffsett = 60;
   
       return (
-        <PopoverMenu showMenu={this.state.isVisible} closeMenu={this.toggleMenu} topOffset={topOffset}>
+        <PopoverMenu showMenu={this.state.menuIsVisible} closeMenu={this.toggleMenu} topOffset={topOffset}>
             <PopoverMenuRow title='Menu Item 1' onPress={() => console.log("Pressed Menu Item 1")} />
             <PopoverMenuRow title='Menu Item 2' onPress={() => console.log("Pressed Menu Item 2")} />
             // <MyCustomMenuRow /> 
